@@ -1,0 +1,30 @@
+class Solution:
+    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+
+
+        # even = []
+        # odd = []
+
+        # for i in range(len(nums)):
+
+        #     if nums[i] % 2 ==0 :
+
+        #         even.append(nums[i])
+
+        #     else: 
+        #         odd.append(nums[i])
+
+        # return even + odd
+        
+
+        l = 0
+
+        for i in range(len(nums)):
+
+            if nums[i] % 2 == 0:
+
+                nums[l],nums[i] = nums[i],nums[l]
+
+                l += 1
+
+        return nums
